@@ -1,0 +1,12 @@
+version: '3'
+services:
+  pociongiapi:
+    build:
+      ./pociongi_api
+    ports:
+      - "11111:11111"
+  pociongiclient:
+    build:
+      ./pociongi_client
+    ports:
+    - "22222:22222"

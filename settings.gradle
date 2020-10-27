@@ -1,0 +1,3 @@
+rootProject.name = 'pociongi'
+include 'pociongi_api'
+include 'pociongi_client'
