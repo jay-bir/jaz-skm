@@ -16,6 +16,10 @@ public class Passenger {
         destination = destinations[random.nextInt(destinations.length)];
     }
 
+    public Passenger(){
+
+    }
+
     public String getDestination(){
         return this.destination;
     }

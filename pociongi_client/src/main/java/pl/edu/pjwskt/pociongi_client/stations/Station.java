@@ -16,21 +16,11 @@ public class Station {
         this.name = name;
     }
 
-    public boolean isForwardEmpty(){
-        return trainForward == null;
+    public Station(){
+
     }
 
-    public boolean isBackwardEmpty(){
-        return trainBackward == null;
-    }
 
-    public void setTrainForward(Train trainForward){
-        this.trainForward = trainForward;
-    }
-
-    public void setTrainBackward(Train trainBackward){
-        this.trainBackward = trainBackward;
-    }
 
     public String getName(){
         return this.name;

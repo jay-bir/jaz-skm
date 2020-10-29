@@ -10,6 +10,10 @@ public class TrainSegment {
     private float density;
     private ArrayList<Passenger> passengers;
 
+    public TrainSegment(){
+
+    }
+
     public TrainSegment(int id, int capacity){
         this.density = 0;
         this.id = id;
@@ -23,6 +27,10 @@ public class TrainSegment {
 
     public float getDensity() {
         return density;
+    }
+
+    public int getId(){
+        return id;
     }
 
 

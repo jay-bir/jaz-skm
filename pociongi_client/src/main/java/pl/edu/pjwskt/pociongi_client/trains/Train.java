@@ -10,6 +10,8 @@ public class Train {
     private Station station;
     private TrainSegment[] segments;
 
+    public Train(){}
+
     public Train(int id, int numberOfSegments, int segmentCapacity){
         this.id = id;
         this.segments = new TrainSegment[numberOfSegments];
@@ -18,21 +20,20 @@ public class Train {
         }
     }
 
-    public boolean isForward(){
-        return this.forward;
+    public int getId(){
+        return this.id;
     }
 
-    public void setForward(boolean forward){
-        this.forward = forward;
+    public boolean isForward(){
+        return this.forward;
     }
 
     public Station getStation(){
         return this.station;
     }
 
-    public void setStation(Station station){
-        this.station = station;
+    public TrainSegment[] getSegments(){
+        return segments;
     }
-
 
 }

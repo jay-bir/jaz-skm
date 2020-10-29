@@ -81,6 +81,7 @@ public class Train {
                     passInSeg.remove(i);
                 }
             }
+            segment.updateDensity();
         }
     }
 

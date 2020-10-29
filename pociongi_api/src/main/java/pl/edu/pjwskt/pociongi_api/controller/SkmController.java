@@ -16,14 +16,14 @@ public class SkmController {
 
     private Skm skm;
 
-    @Value("${valX}")
-    private int trains;
+    @Value("${config.trains}")
+    private String trains;
 
-    @Value("${valY}")
-    private int segments;
+    @Value("${config.segments}")
+    private String segments;
 
-    @Value("${valZ}")
-    private int capacity;
+    @Value("${config.capacity}")
+    private String capacity;
 
     public SkmController(){
         skm = new Skm(4,6,10);

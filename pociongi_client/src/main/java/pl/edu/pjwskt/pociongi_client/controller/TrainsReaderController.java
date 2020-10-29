@@ -2,6 +2,7 @@ package pl.edu.pjwskt.pociongi_client.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import pl.edu.pjwskt.pociongi_client.trains.Train;
@@ -23,6 +24,14 @@ public class TrainsReaderController {
         Train[] trains = template.getForObject(URI,Train[].class);
 
         return Arrays.asList(trains);
+    }
+
+    @GetMapping("/readTrains/{id}")
+    public Train readTrain(@PathVariable String id){
+        RestTemplate template = new RestTemplate();
+
+        Train train = template.getForObject(URI + "/" + id, Train.class);
+        return train;
     }
 
 }
