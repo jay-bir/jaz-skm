@@ -25,7 +25,12 @@ public class TrainSegment {
         return density;
     }
 
-    public void updateDensity(){
-        this.density = (passengers.size() / capacity) * 100;
+    public int getId() {
+        return id;
     }
+
+    public void updateDensity(){
+        this.density = (passengers.size() / (float) capacity) * 100;
+    }
+
 }

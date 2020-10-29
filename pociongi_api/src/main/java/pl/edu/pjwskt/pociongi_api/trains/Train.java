@@ -57,6 +57,10 @@ public class Train {
         return id;
     }
 
+    public TrainSegment[] getSegments(){
+        return segments;
+    }
+
     public void loadPassengers(){
         ArrayList<Passenger> passengersOnStation = this.station.getPassengers();
         for(int i = passengersOnStation.size() - 1; i >= 0; i--){

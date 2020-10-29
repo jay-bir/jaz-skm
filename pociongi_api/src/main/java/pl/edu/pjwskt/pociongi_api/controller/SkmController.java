@@ -1,6 +1,7 @@
 package pl.edu.pjwskt.pociongi_api.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,17 +17,11 @@ public class SkmController {
 
     private Skm skm;
 
-    @Value("${config.trains}")
-    private String trains;
 
-    @Value("${config.segments}")
-    private String segments;
 
-    @Value("${config.capacity}")
-    private String capacity;
-
-    public SkmController(){
-        skm = new Skm(4,6,10);
+    @Autowired
+    public SkmController(@Value("${trains}")final int x,@Value("${segments}") final int y, @Value("${capacity}") final int z){
+        skm = new Skm(x,y,z);
     }
 
     @GetMapping("/trains")
